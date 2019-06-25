@@ -1,0 +1,43 @@
+name: flutter_ornekler
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.12.0+2
+  flushbar: ^1.7.0
+  path_provider: ^1.1.0
+  shared_preferences: ^0.5.3+1
+  sqflite: ^1.1.5
+  validators: ^2.0.0+1
+  flutter_launcher_icons: any
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "ic_launcher" # android için de hangi isimle kayıt olsun
+  ios: true # ios için de uygulansın mı ?
+  image_path: "assets/icon.png" #dosyamızın yolu
+
+flutter:
+  assets:
+    - assets/json_dosyalarim/
+    - assets/resimler/
+
+  fonts:
+    # Fontun ismi
+    - family: SigmarOne
+      # Bulunduğu konum
+      fonts:
+        - asset: assets/fontlar/SigmarOne-Regular.ttf
+
+  uses-material-design: true
