@@ -2,6 +2,7 @@ import 'package:flutter_ornekler/sayfalar/alertDialog.dart';
 import 'package:flutter_ornekler/sayfalar/botton_navigation.dart';
 import 'package:flutter_ornekler/sayfalar/butonlar.dart';
 import 'package:flutter_ornekler/sayfalar/container.dart';
+import 'package:flutter_ornekler/sayfalar/diger_form_elemanlari.dart';
 import 'package:flutter_ornekler/sayfalar/formDemo.dart';
 import 'package:flutter_ornekler/sayfalar/giris_uygulamasi.dart';
 import 'package:flutter_ornekler/sayfalar/gridView.dart';
@@ -41,6 +42,7 @@ var rotalar = {
   SayfaIsimleri.BUTONLAR: (context) => Butonlar(),
   SayfaIsimleri.STACK_POSITIONED: (context) => StackVePositioned(),
   SayfaIsimleri.FORM: (context) => FormDemo(),
+  SayfaIsimleri.FORM_ELEMANLARI: (context) => DigerFormElemanlari(),
   SayfaIsimleri.LISTELER: (context) => ListViewDemo(),
   SayfaIsimleri.GRIDVIEW: (context) => GridViewDemo(),
   SayfaIsimleri.PAGEVIEW: (context) => PageViewDemo(),

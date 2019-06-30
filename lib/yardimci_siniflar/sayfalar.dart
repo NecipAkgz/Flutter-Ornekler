@@ -47,6 +47,10 @@ const Sayfalar = [
     "sayfaAdi": SayfaIsimleri.FORM,
   },
   {
+    "baslik": SayfaIsimleri.FORM_ELEMANLARI,
+    "sayfaAdi": SayfaIsimleri.FORM_ELEMANLARI,
+  },
+  {
     "baslik": SayfaIsimleri.LISTELER,
     "sayfaAdi": SayfaIsimleri.LISTELER,
   },

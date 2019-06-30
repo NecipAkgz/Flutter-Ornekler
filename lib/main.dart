@@ -1,5 +1,5 @@
-import 'package:flutter_ornekler/rotalar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ornekler/rotalar.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: rotalar,
-      // home: GirisSayfasi(),
+      // home: DigerFormElemanlari(),
     );
   }
 }

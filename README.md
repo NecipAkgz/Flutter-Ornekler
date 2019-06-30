@@ -1,6 +1,11 @@
-# basit_widgetler
+# Flutter Widget Anlatımları ve Örnekler
 
-A new Flutter project.
+>Flutter Örnekleri
+
+- [necipakgoz.com](www.necipakgoz.com)
+
+---
+
 
 ## Getting Started
 

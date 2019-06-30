@@ -11,6 +11,7 @@ class SayfaIsimleri {
   static const BUTONLAR = "Butonlar";
   static const STACK_POSITIONED = "Stack Ve Positioned";
   static const FORM = "Form ve Validate";
+  static const FORM_ELEMANLARI = "Diğer Form Elemanları";
   static const LISTELER = "Listeler";
   static const GRIDVIEW = "Gridvied Çeşitleri";
   static const SLIVERS = "CustomScrollView - Slivers";
