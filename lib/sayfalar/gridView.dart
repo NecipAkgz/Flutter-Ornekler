@@ -89,6 +89,7 @@ class _GridViewDemoState extends State<GridViewDemo>
 
   GridView _gridViewBuilder() {
     return GridView.builder(
+      itemCount: 30,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 5,

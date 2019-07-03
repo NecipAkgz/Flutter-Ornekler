@@ -13,7 +13,7 @@ class SayfaIsimleri {
   static const FORM = "Form ve Validate";
   static const FORM_ELEMANLARI = "Diğer Form Elemanları";
   static const LISTELER = "Listeler";
-  static const GRIDVIEW = "Gridvied Çeşitleri";
+  static const GRIDVIEW = "Gridview Çeşitleri";
   static const SLIVERS = "CustomScrollView - Slivers";
   static const PAGEVIEW = "PageView";
   static const BOTTOM_NAV = "Bottom Navigation...";
