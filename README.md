@@ -1,8 +1,8 @@
 # Flutter Widget Anlatımları ve Örnekler
 
->Flutter Örnekleri
+> Flutter Örnekleri
 
-- [necipakgoz.com](www.necipakgoz.com)
+- [necipakgoz.com](necipakgoz.com)
 
 ---
 

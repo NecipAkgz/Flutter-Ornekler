@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
- 
+
 void main() => runApp(MyApp());
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,31 +12,31 @@ class MyApp extends StatelessWidget {
     );
   }
 }
- 
+
 class BottonBarDemo extends StatefulWidget {
   @override
   BottonBarDemoState createState() => BottonBarDemoState();
 }
- 
+
 // Tabbar'ın kullanılacağı clasımıza SingleTickerProvider ekliyoruz.
 // bu bize geçiş animasyolarını yapmamız için gerekli
 class BottonBarDemoState extends State<BottonBarDemo>
     with SingleTickerProviderStateMixin {
   // Tabbar üzerinde gerekli kontroleri yapmamıza olanak vericek contollerimiz
   TabController controller;
- 
+
   // Clasımızın initState'i içerisinde contollerimizi tanımlıyoruz.
   // initState = Widget oluşmadan içerisinde verilen işlemleri yapar
   @override
   void initState() {
     super.initState();
- 
+
     // contolleri tanımlarken tabbar'da kaç öğe olucağını(bu örnek için 3)
     // ve SingleTickerProvider'ın bize sağladı animasyon için gerekli olan
     // vsync özelliğinin bu controll üzerinde gerçekleşeceğini sözlüyoruz.
     controller = TabController(length: 3, vsync: this);
   }
- 
+
   // işimiz bitince gereksiz kaynak harcamaması için contollerimizi kapatıyoruz
   @override
   void dispose() {
@@ -44,7 +44,7 @@ class BottonBarDemoState extends State<BottonBarDemo>
     controller.dispose();
     super.dispose();
   }
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,10 +77,10 @@ class BottonBarDemoState extends State<BottonBarDemo>
     );
   }
 }
- 
+
 /* -------------------------------- Sayfalar -------------------------------- */
 /* ---- Basit olsun diye aynı dart dosyasında, normalde ayrı oluşturulur. --- */
- 
+
 //Sayfalar Örnek olsun diye içerisinde sadece icon var ama istebilen her şey eklenebilir.
 class Birinci extends StatelessWidget {
   @override
@@ -99,7 +99,7 @@ class Birinci extends StatelessWidget {
     );
   }
 }
- 
+
 class Ikinci extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -117,7 +117,7 @@ class Ikinci extends StatelessWidget {
     );
   }
 }
- 
+
 class Ucuncu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

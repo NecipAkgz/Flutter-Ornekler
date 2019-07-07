@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+desktop.ini
 
 # IntelliJ related
 *.iml
