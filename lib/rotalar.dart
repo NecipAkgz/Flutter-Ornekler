@@ -1,3 +1,4 @@
+import 'package:flutter_ornekler/anaEkran/anaSayfa.dart';
 import 'package:flutter_ornekler/sayfalar/alertDialog.dart';
 import 'package:flutter_ornekler/sayfalar/botton_navigation.dart';
 import 'package:flutter_ornekler/sayfalar/butonlar.dart';
@@ -21,7 +22,6 @@ import 'package:flutter_ornekler/sayfalar/sqFliteDemo.dart';
 import 'package:flutter_ornekler/sayfalar/stack_positioned.dart';
 import 'package:flutter_ornekler/sayfalar/stateles_uygulama.dart';
 import 'package:flutter_ornekler/sayfalar/statefull_widget.dart';
-import 'package:flutter_ornekler/anaSayfa.dart';
 import 'package:flutter_ornekler/sayfalar/tabbar_demo.dart';
 import 'package:flutter_ornekler/sayfalar/textField_demo.dart';
 import 'package:flutter_ornekler/sayfalar/textWidget.dart';
@@ -30,7 +30,7 @@ import 'package:flutter_ornekler/sayfalar/yerel_depolama.dart';
 
 /// Rota isimlerini tutucak
 var rotalar = {
-  "/": (context) => GirisSayfasi(),
+  "/": (context) => AnaSayfa(),
   SayfaIsimleri.GIRIS_UYGULAMASI: (context) => BasitUygulama(),
   SayfaIsimleri.STATELESS_WIDGET: (context) => StatelesUygulama(),
   SayfaIsimleri.STATEFUL_WIDGET: (context) => StatefullUygulama(),
