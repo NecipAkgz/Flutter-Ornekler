@@ -1,4 +1,3 @@
-/* ----------------- Aramaİşlemleri için gerekli olan class ----------------- */
 import 'package:flutter/material.dart';
 import 'package:flutter_ornekler/yardimci_siniflar/rasgele_renk.dart';
 import 'package:flutter_ornekler/yardimci_siniflar/sayfalar.dart';
@@ -36,7 +35,7 @@ class AramaYapDelegete extends SearchDelegate {
         child: Text("2 Harf veya daha fazla olmalı"),
       );
     } else {
-      return AramaEkrani(query: query.toLowerCase());
+      return AramaEkrani(query: query.toLowerCase().trim());
     }
   }
 
@@ -46,7 +45,7 @@ class AramaYapDelegete extends SearchDelegate {
   }
 }
 
-/* ------------------------------ Arama Widgeti ----------------------------- */
+/* ------------------------------ AramaEkranı Widgeti ----------------------------- */
 
 class AramaEkrani extends StatelessWidget {
   final String query;

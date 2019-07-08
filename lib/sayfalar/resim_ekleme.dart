@@ -5,12 +5,16 @@ class ResimEkleme extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Resim Ekleme")),
-      body: Column(
-        children: <Widget>[
-          YerelResim(),
-          SizedBox(height: 10),
-          InternetResim(),
-        ],
+      body: Center(
+        child: FittedBox(
+          child: Column(
+            children: <Widget>[
+              YerelResim(),
+              SizedBox(height: 10),
+              InternetResim(),
+            ],
+          ),
+        ),
       ),
     );
   }
