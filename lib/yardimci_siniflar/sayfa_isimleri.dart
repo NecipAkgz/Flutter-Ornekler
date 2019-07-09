@@ -28,4 +28,5 @@ class SayfaIsimleri {
   static const YEREL_DEPOLAMA = "Yerel Depolama";
   static const SHAREDPREFERANCE = "SharedPreferance";
   static const SQFLITE = "SQLite (SQFLite)";
+  static const SAFEAREA = "SafeArea";
 }

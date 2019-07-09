@@ -1,4 +1,3 @@
-/* ----------------- Aramaİşlemleri için gerekli olan class ----------------- */
 import 'package:flutter/material.dart';
 import 'package:flutter_ornekler/yardimci_siniflar/rasgele_renk.dart';
 import 'package:flutter_ornekler/yardimci_siniflar/sayfalar.dart';
@@ -36,7 +35,7 @@ class AramaYapDelegete extends SearchDelegate {
         child: Text("2 Harf veya daha fazla olmalı"),
       );
     } else {
-      return AramaEkrani(query: query.toLowerCase());
+      return AramaEkrani(query: query.toLowerCase().trim());
     }
   }
 
@@ -46,7 +45,7 @@ class AramaYapDelegete extends SearchDelegate {
   }
 }
 
-/* ------------------------------ Arama Widgeti ----------------------------- */
+/* ------------------------------ AramaEkranı Widgeti ----------------------------- */
 
 class AramaEkrani extends StatelessWidget {
   final String query;
@@ -54,38 +53,41 @@ class AramaEkrani extends StatelessWidget {
   AramaEkrani({Key key, this.query}) : super(key: key);
 
   // Verilen Query'e göre yeni bir liste oluşturup onu dönecek
-  List bulunanSonuc() {
-    Iterable<String> iterable = Sayfalar.map((f) => f["baslik"]).toList();
+  List _bulunanSonuclar() {
+    var temelListesi = FLUTTER_TEMEL.map((f) => f["baslik"]).toList();
+
+    var kisaKisaListesi = KISA_KISA_WIDGETLER.map((f) => f["baslik"]).toList();
+    temelListesi.addAll(kisaKisaListesi);
+
     var sonuc =
-        iterable.where((eleman) => eleman.toLowerCase().contains(query));
+        temelListesi.where((eleman) => eleman.toLowerCase().contains(query));
+
     return sonuc.toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (bulunanSonuc().length > 0) {
-      return sonucBulundu();
+    if (_bulunanSonuclar().length > 0) {
+      return _sonucBulundu();
     } else {
-      return sonucBulunamadi();
+      return _sonucBulunamadi();
     }
   }
 
   // Query Sonucuna göre Liste dönücek
-  Container sonucBulundu() {
+  Container _sonucBulundu() {
     return Container(
       child: ListView.builder(
-        itemCount: bulunanSonuc().length,
+        itemCount: _bulunanSonuclar().length,
         itemBuilder: (context, index) {
           return Card(
-            shape: RoundedRectangleBorder(
-              side: BorderSide(color: Colors.black54),
-            ),
             color: RasgeleRenk.renkUret(minBrightness: 80),
             child: ListTile(
               leading: Icon(Icons.arrow_downward),
-              onTap: () => Navigator.pushNamed(context, bulunanSonuc()[index]),
+              onTap: () =>
+                  Navigator.pushNamed(context, _bulunanSonuclar()[index]),
               title: Text(
-                bulunanSonuc()[index],
+                _bulunanSonuclar()[index],
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
             ),
@@ -96,7 +98,7 @@ class AramaEkrani extends StatelessWidget {
   }
 
   // Query sonuçsuz kalırsa dönücek
-  Container sonucBulunamadi() {
+  Container _sonucBulunamadi() {
     return Container(
       child: Center(
         child: Text("Sonuç Bulunamadı"),

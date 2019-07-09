@@ -1,7 +1,7 @@
 import 'package:flutter_ornekler/yardimci_siniflar/sayfa_isimleri.dart';
 
 /// Builder ile rahat yapılar oluşturabilmek için sayfaların bilgisini tutacak
-const Sayfalar = [
+const FLUTTER_TEMEL = [
   {
     "baslik": SayfaIsimleri.GIRIS_UYGULAMASI,
     "sayfaAdi": SayfaIsimleri.GIRIS_UYGULAMASI,
@@ -109,5 +109,12 @@ const Sayfalar = [
   {
     "baslik": SayfaIsimleri.SQFLITE,
     "sayfaAdi": SayfaIsimleri.SQFLITE,
+  },
+];
+
+const KISA_KISA_WIDGETLER = [
+  {
+    "baslik": SayfaIsimleri.SAFEAREA,
+    "sayfaAdi": SayfaIsimleri.SAFEAREA,
   },
 ];

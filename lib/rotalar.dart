@@ -1,4 +1,5 @@
 import 'package:flutter_ornekler/anaEkran/anaSayfa.dart';
+import 'package:flutter_ornekler/kisa_kisa_widgetler/safeArea.dart';
 import 'package:flutter_ornekler/sayfalar/alertDialog.dart';
 import 'package:flutter_ornekler/sayfalar/botton_navigation.dart';
 import 'package:flutter_ornekler/sayfalar/butonlar.dart';
@@ -58,4 +59,5 @@ var rotalar = {
   SayfaIsimleri.YEREL_DEPOLAMA: (context) => YerelDepolama(),
   SayfaIsimleri.SHAREDPREFERANCE: (context) => SharedPreferanceDemo(),
   SayfaIsimleri.SQFLITE: (context) => SQLiteDemo(),
+  SayfaIsimleri.SAFEAREA: (context) => SafeAreaDemo(),
 };
