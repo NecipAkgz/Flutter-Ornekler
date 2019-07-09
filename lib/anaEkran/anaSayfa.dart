@@ -9,7 +9,7 @@ class AnaSayfa extends StatefulWidget {
 }
 
 class _AnaSayfaState extends State<AnaSayfa> {
-  var index = 0;
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
         backgroundColor: Color(0xFF24243e),
         centerTitle: true,
         title: Text("Flutter Örnekler"),
-        actions: [aramaButonu(context)],
+        actions: [_aramaButonu(context)],
       ),
       body: sayfagetir(),
       bottomNavigationBar: buildBottomNavigationBar(),
@@ -33,9 +33,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
       unselectedItemColor: Colors.white70,
       currentIndex: index,
       onTap: (sayfa) {
-        setState(() {
-          index = sayfa;
-        });
+        setState(() => index = sayfa);
       },
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -61,7 +59,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
   }
 
   /// arama yapmak için oluşturduğumuz buton
-  IconButton aramaButonu(BuildContext context) {
+  IconButton _aramaButonu(BuildContext context) {
     return IconButton(
       icon: Icon(Icons.search),
       onPressed: () {
