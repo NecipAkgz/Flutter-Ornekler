@@ -3,6 +3,13 @@ import 'package:flutter_ornekler/yardimci_siniflar/rasgele_renk.dart';
 import 'package:flutter_ornekler/yardimci_siniflar/sayfalar.dart';
 import 'package:flutter/material.dart';
 
+const _gradientColor = LinearGradient(colors: [
+  Color(0xFF3c1053),
+  Color(0xFFad5389),
+]);
+
+const _textStyle = TextStyle(fontWeight: FontWeight.w600);
+
 class AnaSayfa extends StatefulWidget {
   @override
   _AnaSayfaState createState() => _AnaSayfaState();
@@ -54,7 +61,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
       case 0:
         return _flutterTemel();
       case 1:
-        return _kisa_kisa_widgetler();
+        return _kisaKisaWidgetler();
     }
   }
 
@@ -74,12 +81,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
   Widget _flutterTemel() {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF3c1053),
-            Color(0xFFad5389),
-          ],
-        ),
+        gradient: _gradientColor,
       ),
       child: ListView.builder(
         itemCount: FLUTTER_TEMEL.length,
@@ -87,14 +89,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
           return Card(
             elevation: 5,
             child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    RasgeleRenk.renkUret(minBrightness: 100),
-                    RasgeleRenk.renkUret(minBrightness: 100),
-                  ],
-                ),
-              ),
+              decoration: _boxDecoration(),
               child: ListTile(
                 leading: Icon(Icons.arrow_downward),
                 onTap: () => Navigator.pushNamed(
@@ -103,9 +98,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                 ),
                 title: Text(
                   "${index + 1} - ${FLUTTER_TEMEL[index]["baslik"]}",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: _textStyle,
                 ),
               ),
             ),
@@ -115,15 +108,10 @@ class _AnaSayfaState extends State<AnaSayfa> {
     );
   }
 
-  Widget _kisa_kisa_widgetler() {
+  Widget _kisaKisaWidgetler() {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF3c1053),
-            Color(0xFFad5389),
-          ],
-        ),
+        gradient: _gradientColor,
       ),
       child: ListView.builder(
         itemCount: KISA_KISA_WIDGETLER.length,
@@ -131,14 +119,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
           return Card(
             elevation: 5,
             child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    RasgeleRenk.renkUret(minBrightness: 100),
-                    RasgeleRenk.renkUret(minBrightness: 100),
-                  ],
-                ),
-              ),
+              decoration: _boxDecoration(),
               child: ListTile(
                 leading: Icon(Icons.arrow_downward),
                 onTap: () => Navigator.pushNamed(
@@ -147,9 +128,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                 ),
                 title: Text(
                   "${index + 1} - ${KISA_KISA_WIDGETLER[index]["baslik"]}",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: _textStyle,
                 ),
               ),
             ),
@@ -158,4 +137,17 @@ class _AnaSayfaState extends State<AnaSayfa> {
       ),
     );
   }
+
+  BoxDecoration _boxDecoration() {
+    return BoxDecoration(
+      gradient: LinearGradient(
+        colors: [
+          RasgeleRenk.renkUret(minBrightness: 100),
+          RasgeleRenk.renkUret(minBrightness: 100),
+        ],
+      ),
+    );
+  }
 }
+
+

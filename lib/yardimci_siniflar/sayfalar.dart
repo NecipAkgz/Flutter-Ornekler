@@ -117,4 +117,8 @@ const KISA_KISA_WIDGETLER = [
     "baslik": SayfaIsimleri.SAFEAREA,
     "sayfaAdi": SayfaIsimleri.SAFEAREA,
   },
+  {
+    "baslik": SayfaIsimleri.EXPANDED_FLEXIBLE,
+    "sayfaAdi": SayfaIsimleri.EXPANDED_FLEXIBLE,
+  },
 ];

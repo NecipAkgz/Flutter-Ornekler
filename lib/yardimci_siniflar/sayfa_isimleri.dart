@@ -29,4 +29,5 @@ class SayfaIsimleri {
   static const SHAREDPREFERANCE = "SharedPreferance";
   static const SQFLITE = "SQLite (SQFLite)";
   static const SAFEAREA = "SafeArea";
+  static const EXPANDED_FLEXIBLE = "Expanded ve Flexible";
 }
