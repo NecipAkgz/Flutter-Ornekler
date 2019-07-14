@@ -30,4 +30,5 @@ class SayfaIsimleri {
   static const SQFLITE = "SQLite (SQFLite)";
   static const SAFEAREA = "SafeArea";
   static const EXPANDED_FLEXIBLE = "Expanded ve Flexible";
+  static const WRAP_CHIP = "Wrap ve Chip";
 }
