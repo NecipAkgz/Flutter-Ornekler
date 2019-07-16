@@ -1,5 +1,6 @@
 import 'package:flutter_ornekler/anaEkran/anaSayfa.dart';
 import 'package:flutter_ornekler/kisa_kisa_widgetler/expanded_flexible.dart';
+import 'package:flutter_ornekler/kisa_kisa_widgetler/opacityDemo.dart';
 import 'package:flutter_ornekler/kisa_kisa_widgetler/safeArea.dart';
 import 'package:flutter_ornekler/kisa_kisa_widgetler/wrap_ve_chip.dart';
 import 'package:flutter_ornekler/sayfalar/alertDialog.dart';
@@ -64,4 +65,5 @@ var rotalar = {
   SayfaIsimleri.SAFEAREA: (context) => SafeAreaDemo(),
   SayfaIsimleri.EXPANDED_FLEXIBLE: (context) => ExpandedVeFlexible(),
   SayfaIsimleri.WRAP_CHIP: (context) => WrapVeChip(),
+  SayfaIsimleri.OPACITY: (context) => OpacityDemo(),
 };

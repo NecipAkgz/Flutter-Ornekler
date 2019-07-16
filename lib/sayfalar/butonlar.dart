@@ -14,6 +14,7 @@ class Butonlar extends StatelessWidget {
           children: <Widget>[
             _raisedButon(),
             _shapeButton(),
+            _digerButonlar(),
           ],
         ),
       ),
@@ -207,6 +208,15 @@ class Butonlar extends StatelessWidget {
           FlatButton.icon(
             icon: Icon(Icons.flag),
             label: Text("İcon ile Flat Buton"),
+            onPressed: () {},
+          ),
+          OutlineButton.icon(
+            icon: Icon(Icons.outlined_flag),
+            label: Text("OutlineButton.icon"),
+            onPressed: () {},
+          ),
+          OutlineButton(
+            child: Text("OutlineButton"),
             onPressed: () {},
           ),
           // Genelde Scaffold un floating action özelliği ile kullandığımız

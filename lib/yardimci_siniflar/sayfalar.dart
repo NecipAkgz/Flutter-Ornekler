@@ -125,4 +125,8 @@ const KISA_KISA_WIDGETLER = [
     "baslik": SayfaIsimleri.WRAP_CHIP,
     "sayfaAdi": SayfaIsimleri.WRAP_CHIP,
   },
+  {
+    "baslik": SayfaIsimleri.OPACITY,
+    "sayfaAdi": SayfaIsimleri.OPACITY,
+  },
 ];

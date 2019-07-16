@@ -31,4 +31,5 @@ class SayfaIsimleri {
   static const SAFEAREA = "SafeArea";
   static const EXPANDED_FLEXIBLE = "Expanded ve Flexible";
   static const WRAP_CHIP = "Wrap ve Chip";
+  static const OPACITY = "Opacity ve AnimatedOpacity";
 }
