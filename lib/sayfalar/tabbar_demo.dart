@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/* -------------------------------- 1.öntem ------------------------------- */
+
 class TabbarDemo extends StatefulWidget {
   @override
   TabbarDemoState createState() => TabbarDemoState();
@@ -75,10 +77,50 @@ class TabbarDemoState extends State<TabbarDemo>
         // Scaffold Boddy kısmına ise yine yukarıda oluşturduğumuz
         // TabbarView'imizi çağırıp parametre olarak sayfalarımızı veriyoruz
         body: getTabBarView([
-          Birince(),
+          Birinci(),
           Ikinci(),
           Ucuncu(),
         ]));
+  }
+}
+
+/* -------------------------------- 2.Yöntem ------------------------------- */
+class TabbarYontemiki extends StatefulWidget {
+  @override
+  _TabbarYontemikiState createState() => _TabbarYontemikiState();
+}
+
+class _TabbarYontemikiState extends State<TabbarYontemiki> {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      // Tabbar'ımızın kaç elemanı olucak ?
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Tabbar 2. Yöntem"),
+          // elemanlarımızın iconları isimleri vb.
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(
+                icon: Icon(Icons.category),
+              ),
+              Tab(
+                icon: Icon(Icons.star),
+              ),
+            ],
+          ),
+        ),
+        // TabBarView içerisine Tabbar içerisindeki elemanlarla
+        // eşleşicek sayfaları ekliyoruz
+        body: TabBarView(
+          children: <Widget>[
+            Birinci(),
+            Ikinci(),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -86,7 +128,7 @@ class TabbarDemoState extends State<TabbarDemo>
 /* ---- Basit olsun diye aynı dart dosyasında, normalde ayrı oluşturulur. --- */
 
 //Sayfalar Örnek olsun diye içerisinde sadece icon var ama istebilen her şey eklenebilir.
-class Birince extends StatelessWidget {
+class Birinci extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
