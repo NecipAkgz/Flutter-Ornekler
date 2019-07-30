@@ -102,22 +102,15 @@ class _TabbarYontemikiState extends State<TabbarYontemiki> {
           // elemanlarımızın iconları isimleri vb.
           bottom: TabBar(
             tabs: <Widget>[
-              Tab(
-                icon: Icon(Icons.category),
-              ),
-              Tab(
-                icon: Icon(Icons.star),
-              ),
+              Tab(icon: Icon(Icons.category)),
+              Tab(icon: Icon(Icons.star)),
             ],
           ),
         ),
         // TabBarView içerisine Tabbar içerisindeki elemanlarla
         // eşleşicek sayfaları ekliyoruz
         body: TabBarView(
-          children: <Widget>[
-            Birinci(),
-            Ikinci(),
-          ],
+          children: <Widget>[Birinci(),Ikinci()],
         ),
       ),
     );
